@@ -24,3 +24,26 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+
+
+Master Plan
+
+- Draw wireframes
+- Fill in HTML
+-Make supabase tables, RLS policies, copy CDN and client key
+- Write fetch-utils
+        - createParticipant
+        - deleteParticipant
+        - getWorkshops
+- Start create.js page and fill in event listeners:
+        - form 'submit', call createParticipant
+        - window 'load', grab selector and call getWorkshops --- write 'for' loop to create option element
+
+- Start workshops.js
+        - write fetchAndDisplayWorkshops function
+                -event listener on participants to delete on click
+        - (event listener window 'load' to call getWorkshops)??
+
+-Make sure HTML pages are linked thru the appropriate pathways
+- Test logout/login
