@@ -1,4 +1,4 @@
-import { createParticipant } from "../fetch-utils";
+import { createParticipant, getWorkshops } from "../fetch-utils";
 
 const form = document.querySelector('.sign-up-form');
 
@@ -14,4 +14,19 @@ form.addEventListener('submit', async e => {
 
     form.reset();
 
+});
+
+window.addEventListener('load', async () => {
+    const selectorEl = document.querySelector('select');
+
+    const workshops = await getWorkshops();
+
+    for (let workshop of workshops) {
+        const optionEl = document.createElement('option');
+
+        optionEl.value = workshop.id;
+        optionEl.textContent = workshop.name;
+
+        selectorEl.append(optionEl);
+    }
 });
