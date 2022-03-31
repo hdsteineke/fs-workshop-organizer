@@ -3,6 +3,37 @@ const SUPABASE_KEY = '';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+
+export async function createParticipant(participant) {
+    const response = await client
+        .from('participants')
+        .insert(participant);
+
+    return response.body;
+}
+
+export async function deleteParticipant(id) {
+    const response = await client
+        .from('participants')
+        .delete()
+        .match({ id:id });
+
+    return response.body;
+}
+
+export async function getWorkshops() {
+    const response = await client
+        .from('workshops')
+        .select('*, participants (*)');
+
+    return response.body;
+
+}
+
+
+
+
+
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
