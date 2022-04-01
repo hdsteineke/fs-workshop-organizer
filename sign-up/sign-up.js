@@ -1,8 +1,6 @@
 import { createParticipant, getWorkshops } from '../fetch-utils.js';
 
 const form = document.querySelector('.sign-up-form');
-const signUpButton = document.querySelector('#sign-up-button');
-
 
 form.addEventListener('submit', async e => {
     e.preventDefault();
