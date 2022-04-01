@@ -1,6 +1,7 @@
-import { createParticipant, getWorkshops } from "../fetch-utils";
+import { createParticipant, getWorkshops } from '../fetch-utils.js';
 
 const form = document.querySelector('.sign-up-form');
+const signUpButton = document.querySelector('#sign-up-button');
 
 
 form.addEventListener('submit', async e => {
@@ -9,7 +10,8 @@ form.addEventListener('submit', async e => {
 
     await createParticipant({
         name: data.get('name'),
-        email: data.get('email')
+        email: data.get('email'),
+        workshop_id: data.get('workshop-id')
     });
 
     form.reset();
@@ -30,3 +32,4 @@ window.addEventListener('load', async () => {
         selectorEl.append(optionEl);
     }
 });
+
