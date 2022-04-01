@@ -33,8 +33,6 @@ export async function getWorkshops() {
 
 
 
-
-
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
@@ -67,6 +65,16 @@ export async function logout() {
     await client.auth.signOut();
 
     return (window.location.href = '../');
+}
+
+
+export async function createWorkshop(workshop) {
+    const response = await client
+        .from('workshops')
+        .insert(workshop);
+        
+    return response.body;
+
 }
 
 // function checkError({ data, error }) {

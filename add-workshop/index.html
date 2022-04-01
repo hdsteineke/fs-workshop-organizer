@@ -17,17 +17,30 @@
 <body>
     <header>
         <div class="gutter-right logo">
+            <a href="../workshops" >See all Workshops</a>
+            <a href="../sign-up" >Register Here</a>
+            <a href="../add-workshop" >Add a Workshop</a>
             <img src="../assets/big-logo.png" />
         </div>
     </header>    
     <button id="logout">Logout</button>
     <main>
-        <h1>You are logged in!</h1>
+        <h1>Add a Workshop to the Agenda</h1>
+        <form class="add-workshop-form">
+            <label>
+                Workshop:
+                <input name="workshop-name">
+            </label>
+
+                </select>
+            </label>
+            <button id="sign-up-button">Add workshop</button>
+        </form>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
-    <script type="module" src="./other-page.js"></script>
+    <script type="module" src="./add-workshop.js"></script>
 </body>
 
 </html>

@@ -133,3 +133,8 @@ footer {
 .sign-up-main {
     display: flex;
 }
+
+a {
+    padding: 10px;
+    
+}
