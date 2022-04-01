@@ -17,17 +17,35 @@
 <body>
     <header>
         <div class="gutter-right logo">
+            <a href="../workshops" >See all Workshops</a>
             <img src="../assets/big-logo.png" />
         </div>
     </header>    
     <button id="logout">Logout</button>
-    <main>
-        <h1>You are logged in!</h1>
+    <main class="sign-up-main">
+        <h2>Sign up for a Workshop</h2>
+        <form class="sign-up-form">
+            <label>
+                Name
+                <input name="name">
+            </label>
+            <label>
+                Email:
+                <input name="email">
+            </label>
+            <label>
+                Workshop
+                <select name="workshop-id">
+
+                </select>
+            </label>
+            <button id="sign-up-button">Sign me up!</button>
+        </form>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
-    <script type="module" src="./other-page.js"></script>
+    <script type="module" src="./sign-up.js"></script>
 </body>
 
 </html>
