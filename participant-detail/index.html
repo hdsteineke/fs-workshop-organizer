@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="gutter-right logo">
+            <a href="../workshops" >See all Workshops</a>
+            <a href="../sign-up" >Register Here</a>
+            <a href="../add-workshop" >Add a Workshop</a>
+            <img src="../assets/big-logo.png" />
+        </div>
+    </header>    
+    <button id="logout">Logout</button>
+    <main class="sign-up-main">
+        <h2>Edit Participant</h2>
+        <form class="sign-up-form">
+            <label>
+                Name
+                <input name="name">
+            </label>
+            <label>
+                Email:
+                <input name="email">
+            </label>
+            <label>
+                Workshop
+                <select name="workshop-id">
+
+                </select>
+            </label>
+            <button id="sign-up-button">Sign me up!</button>
+        </form>
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+    </footer>
+    <script type="module" src="./participant-detail.js"></script>
+</body>
+
+</html>
