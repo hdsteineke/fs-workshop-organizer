@@ -77,6 +77,25 @@ export async function createWorkshop(workshop) {
 
 }
 
+export async function getParticipant(id) {
+    const response = await client
+        .from('participants')
+        .select('*')
+        .match({ id: id })
+        .single();
+
+    return response.body;
+
+}
+
+export async function updateParticipant() {
+    const response = await client
+        .from('participants')
+        .match({ id: id })
+        .single();
+
+    return response.body;
+}
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }

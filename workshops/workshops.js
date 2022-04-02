@@ -34,7 +34,7 @@ async function fetchAndDisplayWorkshops() {
             participantEl.textContent = participant.name;
 
             participantEl.addEventListener('click', async () => {
-                await deleteParticipant(participant.id);
+                //await deleteParticipant(participant.id);
                 await fetchAndDisplayWorkshops();
 
             });
